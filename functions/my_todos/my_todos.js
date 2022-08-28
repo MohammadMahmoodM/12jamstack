@@ -27,7 +27,7 @@ const resolvers = {
     todos: async (root, args, context) => {
       // return todosList
       try {
-        var adminClient = new faunadb.Client({ secret: 'fnAEvBGLelACUMROKz-H3uP6VFDETDLv5lfZ1beg' });
+        var adminClient = new faunadb.Client({ secret: 'fnAEvDk4vcACS9A12AuF0CyYTpbZp2KjK6RmNRAI' });
 
         const result = await adminClient.query(
           q.Map(
@@ -62,7 +62,7 @@ const resolvers = {
       console.log(todosList);*/
 
       try {
-        var adminClient = new faunadb.Client({ secret: 'fnAEvBGLelACUMROKz-H3uP6VFDETDLv5lfZ1beg' });
+        var adminClient = new faunadb.Client({ secret: 'fnAEvDk4vcACS9A12AuF0CyYTpbZp2KjK6RmNRAI' });
 //fnAD3k5_3EACB6gCBsRr3R3wpEKT_uo1PpVFackm
         const result = await adminClient.query(
           q.Create(

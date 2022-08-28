@@ -1,9 +1,10 @@
 type Todo {
-   title: String!
-   completed: Boolean
+   task: String!,
+   id: String!,
+   status: Boolean
 }
 
 type Query {
    allTodos: [Todo!]
-   todosByCompletedFlag(completed: Boolean!): [Todo!]
+   todosByCompletedFlag(status: Boolean!): [Todo!]
 }

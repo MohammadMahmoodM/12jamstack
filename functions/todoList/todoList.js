@@ -22,7 +22,7 @@ const resolvers = {
   Query: {
     todos: async (root, args, context) => {
       try {
-        var adminClient = new faunadb.Client({ secret: 'fnAEvBGLelACUMROKz-H3uP6VFDETDLv5lfZ1beg' });
+        var adminClient = new faunadb.Client({ secret: 'fnAEvDk4vcACS9A12AuF0CyYTpbZp2KjK6RmNRAI' });
         const result = await adminClient.query(
           q.Map(
             q.Paginate(q.Match(q.Index('task'))),
@@ -53,7 +53,7 @@ const resolvers = {
   Mutation: {
     addTodo: async (_, { task }) => {
       try {
-        var adminClient = new faunadb.Client({ secret: 'fnAEvBGLelACUMROKz-H3uP6VFDETDLv5lfZ1beg' });
+        var adminClient = new faunadb.Client({ secret: 'fnAEvDk4vcACS9A12AuF0CyYTpbZp2KjK6RmNRAI' });
         const result = await adminClient.query(
           q.Create(
             q.Collection('todos'),
@@ -76,7 +76,7 @@ const resolvers = {
         const reqId = JSON.stringify(id);
         const reqId2 = JSON.parse(id);
         console.log(id);
-        var adminClient = new faunadb.Client({ secret: 'fnAEvBGLelACUMROKz-H3uP6VFDETDLv5lfZ1beg' });
+        var adminClient = new faunadb.Client({ secret: 'fnAEvDk4vcACS9A12AuF0CyYTpbZp2KjK6RmNRAI' });
         const result = await adminClient.query(
           q.Delete(q.Ref(q.Collection("todos"), id))
         );
